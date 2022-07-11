@@ -1,4 +1,4 @@
-package assignment1;
+package assignment2;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -6,16 +6,16 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class AllEmployeeDetails {
+public class AllEmpDetails {
 
 	public static void main(String[] args) {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver"); //
-			String cs="jdbc:mysql://localhost:3306/db1"; // connection string
+			String cs="jdbc:mysql://localhost:3306/db2"; // connection string
 			try {
 				Connection conn=DriverManager.getConnection(cs, "root", "Chandani@99");
 				
-				PreparedStatement ps=conn.prepareStatement("select * from employee");
+				PreparedStatement ps=conn.prepareStatement("select * from employee2");
 				ResultSet rs=ps.executeQuery();
 				while(rs.next()) {
 					int i=rs.getInt("eid");
@@ -35,10 +35,10 @@ public class AllEmployeeDetails {
 				e.printStackTrace();
 			}
 		} catch (ClassNotFoundException e) {
-			
+			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
+		// TODO Auto-generated method stub
 
 	}
 

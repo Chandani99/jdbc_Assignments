@@ -9,7 +9,7 @@ import java.util.Scanner;
 public class EmpDetailsWithBonus {
 
 	public static void main(String[] args) {
-Scanner sc = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
 		
 		System.out.println("Enter bonus :");
 		int bonus= sc.nextInt();
